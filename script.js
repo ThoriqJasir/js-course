@@ -45,3 +45,25 @@ if (johnScore > mikeScore && johnScore > maryScore) {
     console.log('It\'s a Draw')
 }
 
+
+//CODING HCALLENGE 3
+
+function tipCalculator(cash) {
+    var percent;
+    if(cash < 50) {
+        percent = .2;
+    }
+    else if(cash >= 50 && cash < 200) {
+        percent = .15;
+    }
+    else {
+        percent = .1;
+    }
+    return cash * percent;
+}
+var johnCash = [124, 48, 268];
+var tipResult = [tipCalculator(johnCash[0]), tipCalculator(johnCash[1]), tipCalculator(johnCash[2])];
+var johnPay = [johnCash[0] + tipResult[0], johnCash[1] + tipResult[1], johnCash[2] + tipResult[2]]
+
+console.log(tipResult, johnPay)
+
